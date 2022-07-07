@@ -12,9 +12,9 @@ var baseURL string
 
 func TestE2e(t *testing.T) {
 	RegisterFailHandler(Fail)
-	baseURL = os.Getenv("TS_BASE_URL")
+	baseURL = os.Getenv("BASE_URL")
 	if baseURL == "" {
-		baseURL = "tactic.terminus.ninja"
+		baseURL = "google.com"
 	}
 	RunSpecs(t, "E2E Integration Testing Suite")
 }
