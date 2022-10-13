@@ -11,9 +11,9 @@ import (
 
 var _ = Describe("Try URL for a 200", func() {
 	It("should return 200", func() {
+		time.Sleep(60)
 		resp, requestErr := http.Get(fmt.Sprintf("https://%s", baseURL))
 		Expect(requestErr).To(BeNil())
 		Expect(resp.StatusCode).To(Equal(201))
-		time.Sleep(60)
 	})
 })
